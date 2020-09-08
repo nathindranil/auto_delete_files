@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Task Records</h1>
+<h1>Added Tasks:</h1>
+<table>
+  <tr>
+    <th>Task Name</th>
+    <th>Task Description</th>
+    <th>Creator</th>
+    <th>Duration</th>
+    <th>Created At</th>
+  </tr>
+  <% if(tasks != undefined) { %>
+    <% tasks.forEach(function(task) { %>
+      <tr>
+        <td><%= task.taskName %></td>
+        <td><%= task.taskDescription %></td>
+        <td><%= task.creator %></td>
+        <td><%= task.duration %></td>
+        <td><%= task.createdAt %></td>
+      </tr>
+    <% }) %>
+  <% } %>
+  </table>
+<h2>To add a task click here</h2>
+<a href="/add"><button type="button" name="button">Add</button></a>
+
+
+<%- include("partials/footer.ejs") %>

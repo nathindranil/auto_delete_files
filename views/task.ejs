@@ -1,0 +1,18 @@
+<%- include("partials/header") %>
+
+<h1>Enter the info</h1>
+
+
+<form action="/add" method="post">
+  <label for="task[taskName]">Task Name</label>
+  <input type="text" name="task[taskName]" placeholder="Enter name of task">
+  <label for="task[taskDescription]">Task Description</label>
+  <input type="text" name="task[taskDescription]" placeholder="Enter description">
+  <label for="task[creator]">Creator</label>
+  <input type="text" name="task[creator]" placeholder="Enter your name">
+  <label for="task[duration]">Duration(E.g. 30min or in milliseconds like 5000 for 5 seconds)</label>
+  <input type="text" name="task[duration]" placeholder="Enter duration in minutes like 30min or in milliseconds like 5000">
+  <input type="submit">
+</form>
+
+<%- include("partials/footer") %>

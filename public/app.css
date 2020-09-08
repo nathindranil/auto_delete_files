@@ -1,0 +1,50 @@
+body {
+  margin: auto 25%;
+}
+
+table {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+td, th {
+  border-top: 1px solid;
+  border-right: 1px solid;
+  text-align: center;
+}
+
+th {
+  height: 50px;
+  width: 10%;
+}
+
+input[type=submit] {
+  width: 25%;
+  padding: 2px;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button {
+  width: 25%;
+  padding: 2px;
+}
+
+button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+label {
+  font-size: 1.2em;
+  font-style: italic;
+}
+
+input {
+  width: 100%;
+  padding: 1.3em;
+  margin-bottom: 2%;
+}
