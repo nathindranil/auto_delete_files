@@ -12,13 +12,15 @@ Day1: i) Created a server side file called app.js. This is the entry file. To ru
 
      iv)  Applied mongoose-ttl to specify dynamic TTL(Time to live) for various documents in the database.
 
-      v)  Created a git repo and added the required files.
+     v) Used mongodb Atlas for database and connected it to our app using the given link.
 
-      vi) Deployed to Heroku using Heroku cli
+      vi)  Created a git repo and added the required files.
+
+      vii) Deployed to Heroku using Heroku cli
 
           Site: intense-stream-94808.herokuapp.com
 
-      vii) Tested with various units of time like milliseconds and minutes
+      viii) Tested with various units of time like milliseconds and minutes
 
           To provide a duration in seconds convert the specific seconds to milliseconds and write the number in the duration input.
           Eg. To give a duration of 10 seconds write 10000 in duration input
