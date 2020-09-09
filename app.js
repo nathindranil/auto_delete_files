@@ -13,7 +13,7 @@ var taskSchema = mongoose.Schema({
   taskDescription: String,
   creator: String,
   duration: String,
-  createdAt: String
+  createdAt: Date
 })
 taskSchema.plugin(ttl, {ttl:5000, reap:false})
 
@@ -38,13 +38,7 @@ app.post("/add", function(req, res) {
     if(err) {
       console.log(err)
     } else {
-      var some_variable = new Date()
-      var time_string_utc = some_variable
-      var time_string_utc_epoch = Date.parse(time_string_utc)
-      var time_utc = new Date();
-      time_utc.setTime(time_string_utc_epoch)
-      task.createdAt = time_utc
-
+      task.createdAt = new Date()
       var dur = task.duration;
       task.ttl = dur;
       task.save();
@@ -54,9 +48,5 @@ app.post("/add", function(req, res) {
 })
 
 app.listen(process.env.PORT, function() {
-  console.log("Server has started!")
-})
-
-app.listen(8000, function() {
   console.log("Server has started!")
 })
