@@ -47,6 +47,6 @@ app.post("/add", function(req, res) {
   })
 })
 
-app.listen(8000, function() {
-  console.log("yelp camp started");
+app.listen(process.env.PORT, function() {
+  console.log("Server has started!")
 })
