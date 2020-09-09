@@ -38,7 +38,7 @@ app.post("/add", function(req, res) {
     if(err) {
       console.log(err)
     } else {
-      task.createdAt = new Date()
+      task.createdAt = new Date("GMT+0530")
       var dur = task.duration;
       task.ttl = dur;
       task.save();
