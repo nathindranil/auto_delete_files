@@ -13,7 +13,7 @@ var taskSchema = mongoose.Schema({
   taskDescription: String,
   creator: String,
   duration: String,
-  createdAt: Date
+  createdAt: String
 })
 taskSchema.plugin(ttl, {ttl:5000, reap:false})
 
@@ -38,7 +38,7 @@ app.post("/add", function(req, res) {
     if(err) {
       console.log(err)
     } else {
-      task.createdAt = new Date("GMT+0530")
+      task.createdAt = new Date().toString()
       var dur = task.duration;
       task.ttl = dur;
       task.save();
